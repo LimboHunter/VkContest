@@ -1,6 +1,6 @@
 package contest.vk.data;
 
-import contest.vk.model.User;
+import contest.vk.security.User;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.Optional;

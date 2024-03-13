@@ -2,15 +2,14 @@ package contest.vk.model;
 
 import lombok.Data;
 
-
 @Data
-public class Post {
+public class Comment {
 
     private Long id;
 
-    private String title;
+    private String name;
+    private String email;
     private String body;
 
-    private Long userId;
-
+    private Long postId;
 }
