@@ -1,13 +1,13 @@
 package contest.vk.data;
 
-import contest.vk.model.Client;
+import contest.vk.model.User;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.Optional;
 
 
-public interface ClientRepository extends CrudRepository<Client, Long> {
+public interface UserRepository extends CrudRepository<User, Long> {
 
-    Client findByUsername(Long id);
+    Optional<User>  findByUsername(String username);
 
 }

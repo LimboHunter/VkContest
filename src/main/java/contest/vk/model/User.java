@@ -1,17 +1,19 @@
 package contest.vk.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+import lombok.Data;
 
+@Data
 @Entity
-public class Client {
+@Table(name = "users")
+public class User {
 
-    private @Id
-    @GeneratedValue Long id;
-    private String username;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
+
     private String password;
-    private String name;
-    private String role;
+    @Column(unique = true)
+    private String username;
 
 }
